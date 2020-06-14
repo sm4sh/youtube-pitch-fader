@@ -1,0 +1,41 @@
+body {
+    overflow: hidden;
+    background-color: #bec0c0;
+}
+
+#popup-content {
+    background-image: url("images/background.png");
+    width: 58px;
+    height: 160px;
+}
+
+input[type=range][orient=vertical] {
+    /* -webkit-appearance: slider-vertical; WebKit */
+    width: 30px;
+    height: 136px;
+    padding: 0 5px 0 14px;
+    background: transparent;
+    margin-left: -6px;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 44px;
+    height: 14px;
+    border: none;
+    background: #2c2e2e;
+    cursor: grab;
+    background-image: url("images/thumb.png");
+}
+
+input[type=range]::-moz-range-thumb:active {
+    cursor: grabbing;
+}
+
+#output {
+    text-align: center;
+    color: #252727;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    line-height: 29px;
+    text-justify: inter-word;
+}

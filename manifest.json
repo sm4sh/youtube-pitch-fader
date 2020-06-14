@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Youtube Pitch Fader",
+    "version": "0.1.0",
+    "description": "It's just a small Pitch Fader for youtube. For all you wannabe DJs like me who would like check if a certain songs sounds better a little faster or slower ;)",
+    "homepage_url": "https://github.com/sm4sh/youtube-pitch-fader",
+
+    "icons": {
+        "64": "icons/64.png"
+    },
+    
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["inject-pitch-fader.js"]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "icons/64.png",
+        "default_title": "Show Pitch Fader",
+        "default_popup": "popup/adjust_pitch.html"
+    },
+
+    "permissions": [
+        "storage"
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "youtube-pitch-fader@sm4sh"
+        }
+      }
+}
