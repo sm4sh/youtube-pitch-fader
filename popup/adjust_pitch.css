@@ -3,6 +3,10 @@ body {
     background-color: #bec0c0;
 }
 
+body > * {
+    display: inline-block;
+}
+
 #popup-content {
     background-image: url("images/background.png");
     width: 58px;
@@ -38,4 +42,10 @@ input[type=range]::-moz-range-thumb:active {
     font-size: 18px;
     line-height: 29px;
     text-justify: inter-word;
+}
+
+#container-left {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
 }

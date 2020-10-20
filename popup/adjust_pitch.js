@@ -27,8 +27,19 @@ function restore() {
 }
 
 function setOutput(newValue) {
-    let percent = newValue * 100
-    document.getElementById("output").innerText = parseInt(percent) + " %"
+    let deltaPercent = ((newValue - 1) * 100).toFixed(1);
+    let sign = '';
+    if (deltaPercent > 0) {
+        let sign = '+ ';
+    } else if (deltaPercent < 0) {
+        let sign = '- ';
+    }
+
+    document.getElementById("output").innerText = sign + deltaPercent + " %"
+}
+
+function mapNumber(in_min, in_max, out_min, out_max) {
+    return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
 restore();

@@ -5,6 +5,17 @@
   </head>
   <link rel="stylesheet" type="text/css" href="adjust_pitch.css">
   <body>
+    <aside id="container-left">
+      <input type="radio" id="eight" name="speed-select" value="8">
+      <b><label for="male">8</label></b>
+      <!-- <br>  -->
+      <input type="radio" id="sixteen" name="speed-select" value="16">
+      <b><label for="male">16</label></b>
+      <!-- <br>  -->
+      <input type="radio" id="fifty" name="speed-select" value="50">
+      <b><label for="male">50</label></b>
+    </aside>
+    <div id="container-right">
       <div id="popup-content">
             <input
               id="pitch-fader"
@@ -15,7 +26,8 @@
               orient="vertical"
             />
       </div>
-      <b><div id="output">100 %</div></b>
-      <script src="adjust_pitch.js"></script>
+      <b><div id="output">0.0 %</div></b>
+    </div>
+    <script src="adjust_pitch.js"></script>
   </body>
 </html>
